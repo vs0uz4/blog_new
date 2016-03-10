@@ -13,7 +13,7 @@ class PostTagTableSeeder extends Seeder
 	{
 		DB::table('post_tag')->truncate();
 
-		DB::insert('post_tag', [
+		DB::table('post_tag')->insert([
 			[
 				'post_id' => 1,
 				'tag_id'  => 1,
