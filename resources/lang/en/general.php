@@ -26,4 +26,5 @@ return [
 	'front_frameworks'  => 'Front frameworks',
 	'back_frameworks'   => 'Back frameworks',
 	'tools_and_libs'    => 'Tools & Libs',
+	'contact_me'        => 'Contact me',
 ];
