@@ -1,0 +1,11 @@
+body > .grid {
+  height: 100%; }
+
+.main {
+  padding-top: 63px; }
+
+.bio, .skills {
+  min-height: 250px; }
+
+.auth {
+  max-width: 450px; }

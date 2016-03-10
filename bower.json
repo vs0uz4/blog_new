@@ -1,0 +1,15 @@
+{
+  "name": "blog",
+  "description": "",
+  "main": "",
+  "authors": [
+    "soywod <clementdouin21@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "dependencies": {
+    "jquery": "^2.2.1",
+    "semantic": "semantic-ui#^2.1.8"
+  }
+}

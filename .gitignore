@@ -1,0 +1,7 @@
+/vendor
+/.idea
+/scoat7
+/node_modules
+/bower_components
+/public/storage
+.env
