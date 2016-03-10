@@ -11,10 +11,34 @@
 |
 */
 
-Route::group(['middleware' => ['web']], function ()
-{
+Route::group(['middleware' => 'web'], function () {
+
+	/*
+	|--------------------------------------------------------------------------
+	| Main routes
+	|--------------------------------------------------------------------------
+	*/
+
 	Route::get('/', 'HomeController@showHomePage')->name('home');
+
+	/*
+	|--------------------------------------------------------------------------
+	| Auth routes
+	|--------------------------------------------------------------------------
+	*/
+
+	Route::get('/login', 'Auth\AuthController@showLoginForm');
 	Route::get('/logout', 'Auth\AuthController@logout')->name('logout');
-	Route::get('/auth', 'Auth\AuthController@showLoginForm');
-	Route::post('/auth', 'Auth\AuthController@login')->name('auth');
+
+	Route::post('/login', 'Auth\AuthController@login')->name('login');
+
+	/*
+	|--------------------------------------------------------------------------
+	| Admin routes
+	|--------------------------------------------------------------------------
+	*/
+
+	Route::group(['middleware' => 'phantom', 'prefix' => 'admin'], function () {
+		Route::get('/', 'AdminController@showHomePage')->name('admin');
+	});
 });

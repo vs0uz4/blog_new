@@ -5,7 +5,7 @@
 @section('content')
     <div class="ui middle aligned center aligned grid">
         <div class="column auth">
-            <form class="ui large form" method="post" action="{{ route('auth') }}">
+            <form class="ui large form" method="post" action="{{ route('login') }}">
                 <div class="ui segment">
                     {{ csrf_field() }}
 
