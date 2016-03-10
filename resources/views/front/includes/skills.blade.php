@@ -8,7 +8,10 @@
             <div class="ui grid">
                 <div class="four column row">
                     @foreach($skills as $skill)
-                        @include('includes.skill')
+                        <div class="column">{{ $skill->name }}</div>
+                        <div class="column">
+                            <div class="ui mini heart rating" data-rating="{{ $skill->level }}" data-max-rating="{{ config('general.max_skills_rating') }}"></div>
+                        </div>
                     @endforeach
                 </div>
             </div>

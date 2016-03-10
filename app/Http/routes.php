@@ -15,11 +15,11 @@ Route::group(['middleware' => 'web'], function () {
 
 	/*
 	|--------------------------------------------------------------------------
-	| Main routes
+	| Front routes
 	|--------------------------------------------------------------------------
 	*/
 
-	Route::get('/', 'HomeController@showHomePage')->name('home');
+	Route::get('/', 'FrontController@showHomePage')->name('home');
 
 	/*
 	|--------------------------------------------------------------------------
@@ -38,7 +38,11 @@ Route::group(['middleware' => 'web'], function () {
 	|--------------------------------------------------------------------------
 	*/
 
-	Route::group(['middleware' => 'phantom', 'prefix' => 'admin'], function () {
+	Route::group(['middleware' => 'phantom', 'prefix' => 'admin', 'as' => 'admin::'], function () {
 		Route::get('/', 'AdminController@showHomePage')->name('admin');
+
+		Route::resource('skill', 'SkillController');
+		Route::resource('tag', 'TagController');
+		Route::resource('post', 'PostController');
 	});
 });

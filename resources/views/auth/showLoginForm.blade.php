@@ -1,6 +1,7 @@
 @extends('master')
 
-@section('title', trans('auth.title'))@section('desc', trans('auth.desc'))
+@section('title', trans('auth.title'))
+@section('desc', trans('auth.desc'))
 
 @section('content')
     <div class="ui middle aligned center aligned grid">

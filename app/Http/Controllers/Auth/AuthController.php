@@ -31,6 +31,13 @@ class AuthController extends Controller
     protected $redirectTo = '/';
 
     /**
+     * The login form view.
+     *
+     * @var string
+     */
+    protected $loginView = 'auth.showLoginForm';
+
+    /**
      * Create a new authentication controller instance.
      *
      * @return void

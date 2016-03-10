@@ -10,6 +10,7 @@ class AdminController extends Controller
 {
 	public function showHomePage()
 	{
+		//return view('admin.showHomePage');
 		return 'ADMIN';
     }
 }
